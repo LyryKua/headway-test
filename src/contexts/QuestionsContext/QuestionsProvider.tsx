@@ -17,10 +17,15 @@ export const QuestionsProvider: FC<QuestionProviderProps> = ({ children, questio
     dispatch({ type: ActionType.CORRECT_ANSWER, payload: {} })
   }
 
+  const lastQuestion = () => {
+    dispatch({ type: ActionType.LAST_QUESTION, payload: {} })
+  }
+
   const value: QuestionsContextType = {
     ...state,
 
     goToNextQuestion,
+    lastQuestion,
   }
 
   return (

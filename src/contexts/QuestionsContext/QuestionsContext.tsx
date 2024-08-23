@@ -11,6 +11,7 @@ export type State = {
 
 export type QuestionsContextType = State & {
   goToNextQuestion: () => void
+  lastQuestion: () => void
 }
 
 export const defaultValue: QuestionsContextType = {
@@ -19,6 +20,7 @@ export const defaultValue: QuestionsContextType = {
   earnedAmount: 0,
 
   goToNextQuestion: () => {},
+  lastQuestion: () => {},
 }
 
 export const QuestionsContext = createContext(defaultValue)

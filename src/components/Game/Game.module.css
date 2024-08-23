@@ -1,0 +1,26 @@
+.container {
+  background: #F5F5F7;
+  flex: 3;
+  padding: 133px 80px 122px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.question {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 37px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
