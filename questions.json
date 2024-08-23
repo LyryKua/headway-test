@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "key": "q1",
+      "content": {
+        "text": "What is the capital of France?"
+      },
+      "options": [
+        {
+          "key": "a",
+          "content": {
+            "text": "Paris"
+          },
+          "isCorrect": true
+        },
+        {
+          "key": "b",
+          "content": {
+            "text": "London"
+          },
+          "isCorrect": false
+        },
+        {
+          "key": "c",
+          "content": {
+            "text": "Berlin"
+          },
+          "isCorrect": false
+        }
+      ],
+      "amount": 1
+    },
+    {
+      "key": "q2",
+      "content": {
+        "text": "What is 2 + 2?"
+      },
+      "options": [
+        {
+          "key": "a",
+          "content": {
+            "text": "3"
+          },
+          "isCorrect": false
+        },
+        {
+          "key": "b",
+          "content": {
+            "text": "4"
+          },
+          "isCorrect": true
+        },
+        {
+          "key": "c",
+          "content": {
+            "text": "5"
+          },
+          "isCorrect": false
+        }
+      ],
+      "amount": 1
+    }
+  ]
+}
