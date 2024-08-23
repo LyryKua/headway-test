@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react'
 import s from './Achievement.module.css'
 
 type AchievementProps = {
@@ -9,21 +9,21 @@ type AchievementProps = {
 
 const resolveClassName = (isEarned: boolean, isCurrent: boolean) => {
   if (isEarned) {
-    return s.earned;
+    return s.earned
   }
   if (isCurrent) {
-    return s.current;
+    return s.current
   }
-  return s.default;
+  return s.default
 }
 
 export const Achievement: FC<AchievementProps> = props => {
-  const { title, isEarned = false, isCurrent = false } = props;
-  const className = resolveClassName(isEarned, isCurrent);
+  const { title, isEarned = false, isCurrent = false } = props
+  const className = resolveClassName(isEarned, isCurrent)
 
   return (
     <div className={className}>
       <span>{title}</span>
     </div>
-  );
+  )
 }

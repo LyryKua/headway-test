@@ -20,7 +20,8 @@ export const defaultValue: QuestionsContextType = {
   earnedAmount: 0,
   isLastQuestion: false,
 
-  goToNextQuestion: () => {},
+  goToNextQuestion: () => {
+  },
 }
 
 export const QuestionsContext = createContext(defaultValue)

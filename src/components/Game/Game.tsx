@@ -24,12 +24,6 @@ export const Game: FC = () => {
     }
   }
 
-  useEffect(() => {
-    if (currentQuestionIndex === questions.length) {
-      router.push(`/game-over?earnedAmount=${earnedAmount}`)
-    }
-  }, [currentQuestionIndex, earnedAmount, router])
-
   return (
     <main className={s.container}>
       <h1 className={s.question}>{question.content.text}</h1>

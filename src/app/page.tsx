@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className={s.container}>
       <div className={s.image}>
-        <Image src="/hand.svg" alt="hand" fill/>
+        <Image src="/hand.svg" alt="hand" fill />
       </div>
       <div className={s.titleWrapper}>
         <h1 className={s.title}>Who wants to be a millionaire</h1>
