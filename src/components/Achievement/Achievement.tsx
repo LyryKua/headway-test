@@ -10,7 +10,7 @@ export const Achievement: FC<AchievementProps> = props => {
   const { title, isEarned = false } = props;
 
   return (
-    <div className={s.root}>
+    <div className={isEarned ? s.green : s.root}>
       <span>{title}</span>
     </div>
   );

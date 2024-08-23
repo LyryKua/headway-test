@@ -28,7 +28,7 @@
           "isCorrect": false
         }
       ],
-      "amount": 1
+      "amount": 10
     },
     {
       "key": "q2",
@@ -58,7 +58,7 @@
           "isCorrect": false
         }
       ],
-      "amount": 1
+      "amount": 20
     }
   ]
 }

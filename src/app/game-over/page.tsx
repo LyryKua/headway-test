@@ -1,15 +1,13 @@
-import { promises as fs } from 'fs'
-import { Question } from '@/domain/types'
 import Link from 'next/link'
 import React from 'react'
 
-export default async function Home() {
-  const data = await fs.readFile(process.cwd() + '/questions.json', 'utf8') // todo: it could go wrong in many ways. add error handling
-  const { questions } = JSON.parse(data) as { questions: Question[] } // todo: add type guard
-
+export default async function Home({
+  searchParams,
+}: { searchParams: { earnedAmount?: string } }) {
+  const { earnedAmount } = searchParams
   return (
     <main>
-      <h1>Total score: Zhytomyr</h1>
+      {earnedAmount && <h1>Total score: ${earnedAmount}</h1>}
       <Link href="/game">Try again</Link>
     </main>
   )
