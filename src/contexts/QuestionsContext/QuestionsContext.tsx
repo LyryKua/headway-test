@@ -7,20 +7,20 @@ export type State = {
   questions: Question[]
   currentQuestionIndex: number
   earnedAmount: number
+  isLastQuestion: boolean
 }
 
 export type QuestionsContextType = State & {
   goToNextQuestion: () => void
-  lastQuestion: () => void
 }
 
 export const defaultValue: QuestionsContextType = {
   questions: [],
   currentQuestionIndex: -1,
   earnedAmount: 0,
+  isLastQuestion: false,
 
   goToNextQuestion: () => {},
-  lastQuestion: () => {},
 }
 
 export const QuestionsContext = createContext(defaultValue)

@@ -8,15 +8,17 @@ import { useRouter } from 'next/navigation'
 import s from './Game.module.css'
 
 export const Game: FC = () => {
-  const { questions, currentQuestionIndex, earnedAmount, lastQuestion, goToNextQuestion } = useQuestionsContext()
+  const { questions, currentQuestionIndex, earnedAmount, goToNextQuestion } = useQuestionsContext()
   const question = questions[currentQuestionIndex]
   const router = useRouter()
 
   const handleAnswerClick = (option: Option) => () => {
     if (option.isCorrect) {
-      currentQuestionIndex < questions.length - 1
-        ? goToNextQuestion()
-        : lastQuestion()
+      if (currentQuestionIndex < questions.length - 1) {
+        goToNextQuestion()
+      } else {
+        router.push(`/game-over?earnedAmount=${earnedAmount + question.amount}`)
+      }
     } else {
       router.push(`/game-over?earnedAmount=${earnedAmount}`)
     }

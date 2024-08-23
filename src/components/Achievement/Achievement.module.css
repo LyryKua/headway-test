@@ -1,7 +1,12 @@
-.container {
-  background: red;
+.default {
+  background: #FDEEED;
 }
 
-.green {
-  background: green;
+.earned {
+  background: #47D867;
+}
+
+.current {
+  background: transparent;
+  border: 2px solid #47D867;
 }

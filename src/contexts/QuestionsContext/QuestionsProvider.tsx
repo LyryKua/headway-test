@@ -11,21 +11,21 @@ type QuestionProviderProps = PropsWithChildren<{
 
 export const QuestionsProvider: FC<QuestionProviderProps> = ({ children, questions }) => {
   // todo: after some refactor using a reducer here seems like an overkill
-  const [state, dispatch] = useReducer(reducer, { questions, currentQuestionIndex: 0, earnedAmount: 0 })
+  const [state, dispatch] = useReducer(reducer, {
+    questions,
+    currentQuestionIndex: 0,
+    earnedAmount: 0,
+    isLastQuestion: false,
+  })
 
   const goToNextQuestion = () => {
     dispatch({ type: ActionType.CORRECT_ANSWER, payload: {} })
-  }
-
-  const lastQuestion = () => {
-    dispatch({ type: ActionType.LAST_QUESTION, payload: {} })
   }
 
   const value: QuestionsContextType = {
     ...state,
 
     goToNextQuestion,
-    lastQuestion,
   }
 
   return (
