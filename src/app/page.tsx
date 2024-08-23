@@ -7,9 +7,11 @@ import s from './page.module.css'
 export default function Home() {
   return (
     <main className={s.container}>
-      <Image src="/hand.svg" alt="hand" width={624} height={367} />
+      <div className={s.image}>
+        <Image src="/hand.svg" alt="hand" fill/>
+      </div>
       <div className={s.titleWrapper}>
-        <h1>Who wants to be a millionaire</h1>
+        <h1 className={s.title}>Who wants to be a millionaire</h1>
         <Link href="/game">
           <Button>
             Start

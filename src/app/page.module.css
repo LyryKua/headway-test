@@ -8,8 +8,35 @@
   padding-bottom: 75px;
 }
 
+.image {
+  position: relative;
+  height: 367px;
+  width: 624px;
+}
+
 .titleWrapper {
   display: flex;
   flex-direction: column;
   gap: 64px
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 24px
+  }
+
+  .image {
+    height: 192px;
+    width: 288px;
+  }
+
+  .titleWrapper {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    text-align: center;
+  }
 }

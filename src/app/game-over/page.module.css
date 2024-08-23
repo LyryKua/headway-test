@@ -7,10 +7,20 @@
   padding-bottom: 75px;
 }
 
-.titleWrapper {
+.image {
+  position: relative;
+  height: 367px;
+  width: 624px;
+}
+
+.titleContainer {
   display: flex;
   flex-direction: column;
   gap: 64px
+}
+
+.totalContainer {
+  gap: 8px;
 }
 
 .total {
@@ -26,5 +36,33 @@
   font-weight: 600;
   line-height: 65px;
   text-align: left;
+}
 
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 24px
+  }
+
+  .image {
+    height: 192px;
+    width: 288px;
+  }
+
+  .titleContainer {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .total {
+    font-size: 18px;
+    text-align: center;
+    line-height: normal;
+  }
+
+  .earned {
+    font-size: 32px;
+    text-align: center;
+    line-height: normal;
+  }
 }

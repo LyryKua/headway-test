@@ -10,11 +10,13 @@ export default async function Home({
   const { earnedAmount } = searchParams
   return (
     <main className={s.container}>
-      <Image src="/hand.svg" alt="hand" width={624} height={367} />
-      <div className={s.titleWrapper}>
-        <div>
+      <div className={s.image}>
+        <Image src="/hand.svg" alt="hand" fill />
+      </div>
+      <div className={s.titleContainer}>
+        <div className={s.totalContainer}>
           <h2 className={s.total}>Total score:</h2>
-          <h1 className={s.earned}>${earnedAmount ?? 0}</h1>
+          <h1 className={s.earned}>${earnedAmount ?? 0} earned</h1>
         </div>
         <Link href="/game">
           <Button>
