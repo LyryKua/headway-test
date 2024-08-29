@@ -18,7 +18,7 @@ export const reducer: Reducer<State, Action> = (state, action) => {
       return {
         ...state,
         currentQuestionIndex: state.currentQuestionIndex + 1,
-        earnedAmount: state.earnedAmount + currentQuestion.amount,
+        earnedAmount: currentQuestion.amount,
         isLastQuestion,
       }
     default:

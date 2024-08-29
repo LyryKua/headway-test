@@ -9,7 +9,6 @@ import s from './page.module.css'
 export default async function Home() {
   const data = await fs.readFile(process.cwd() + '/questions.json', 'utf8') // todo: it could go wrong in many ways. add error handling
   const { questions } = JSON.parse(data) as { questions: Question[] } // todo: add type guard
-  console.log(questions)
 
   return (
     <div className={s.container}>

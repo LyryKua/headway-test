@@ -14,13 +14,16 @@
 }
 
 .options {
+  align-self: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px
+  row-gap: 32px;
+  width: 810px;
 }
 
 .option {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 72px;
 }
