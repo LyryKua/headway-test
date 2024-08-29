@@ -27,3 +27,23 @@
   justify-content: center;
   height: 72px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+    justify-content: end;
+    gap: 97px;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .question {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}

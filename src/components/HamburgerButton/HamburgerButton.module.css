@@ -1,0 +1,18 @@
+.container {
+  background: #FF8B37;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23px;
+  width: 296px;
+  height: 64px;
+}
+
+.container:hover {
+  background: #FFAC70;
+}
+
+.container:active {
+  background: #E87928;
+}

@@ -1,3 +1,7 @@
+.hamburger {
+  display: none;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -8,4 +12,32 @@
   flex-direction: column-reverse;
   width: 376px;
   gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+  }
+
+  .containerOpen {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F5F5F7;
+  }
 }
